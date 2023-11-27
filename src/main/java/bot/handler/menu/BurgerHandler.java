@@ -14,7 +14,7 @@ public class BurgerHandler {
     public static void doubleBurger(final Message message, final TelegramLongPollingBot bot) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(message.getChatId());
-        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/resources/double.png")));
+        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/burgers/double.png")));
         sendPhoto.setCaption("Дабл чикен чиз \n" +
                 "\n" +
                 "Мягкая булочка, две сочные куриные котлеты (Halal), сыр чеддер, свежие помидоры, маринованные огурцы, салатные листья айсберг, соусы майонез и кетчуп \n" +
@@ -27,7 +27,7 @@ public class BurgerHandler {
     public static void barbequeBurger(final Message message, final TelegramLongPollingBot bot) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(message.getChatId());
-        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/resources/barbeque.png")));
+        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/burgers/barbeque.png")));
         sendPhoto.setCaption("Барбекю бургер \n" +
                 "\n" +
                 "Мягкая булочка, сочная куриная котлета (Halal) в фирменной панировке, свежие помидоры, салатные листья айсберг, соус майонез и аппетитный соус Барбекю \n" +
@@ -40,7 +40,7 @@ public class BurgerHandler {
     public static void cheeseBurger(final Message message, final TelegramLongPollingBot bot) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(message.getChatId());
-        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/resources/cheese.png")));
+        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/burgers/cheese.png")));
         sendPhoto.setCaption("Чикен Чиз \n" +
                 "\n" +
                 "Мягкая булочка, сочная куриная котлета (Halal), сыр чеддер, свежие помидоры, салатные листья айсберг, соусы майонез и кетчуп \n" +
@@ -53,7 +53,7 @@ public class BurgerHandler {
     public static void classicBurger(final Message message, final TelegramLongPollingBot bot) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(message.getChatId());
-        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/resources/classic.png")));
+        sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/burgers/classic.png")));
         sendPhoto.setCaption("Классик \n" +
                 "\n" +
                 "Мягкая булочка, нежное куриное филе (Halal) в фирменной панировке, свежие помидоры, маринованные огурцы, салатные листья, соусы майонез и кетчуп \n" +
