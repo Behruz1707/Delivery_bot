@@ -14,24 +14,26 @@ import java.util.List;
 public class CommandHandler {
     public static void handle(final Message message, final TelegramLongPollingBot bot) {
         switch (CommandEnum.of(message.getText())) {
-            case START: handleMessageSTART(message, bot);
-            case HELP: handleMessageHELP(message, bot);
+            case START:
+                handleMessageSTART(message, bot);
+            case HELP:
+                handleMessageHELP(message, bot);
         }
     }
-
 
 
     @SneakyThrows
     public static void handleMessageSTART(final Message message, final TelegramLongPollingBot bot) {
         ReplyKeyboardMarkup replyKeyboardMarkup = ReplyKeyboardMarkup.builder()
                 .keyboardRow(new KeyboardRow(List.of(
-                        KeyboardButton.builder().text("Menu").build())))
+                        KeyboardButton.builder().text("\uD83D\uDECD Order").build())))
                 .build();
         replyKeyboardMarkup.setResizeKeyboard(true);
         SendMessage sendMessage = new SendMessage(message.getChatId().toString(), "Welcome!");
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
         bot.execute(sendMessage);
     }
+
     private static void handleMessageHELP(final Message message, final TelegramLongPollingBot bot) {
 
     }

@@ -22,9 +22,9 @@ public enum CommandEnum {
             .collect(Collectors.toMap(CommandEnum::getValue, commandEnum -> commandEnum));
 
     @SneakyThrows
-    public static CommandEnum of(String command){
+    public static CommandEnum of(String command) {
         final CommandEnum commandEnum = MAP.get(command);
-        if(commandEnum == null){
+        if (commandEnum == null) {
             throw new IllegalAccessException("Unsupported command.");
         }
         return commandEnum;

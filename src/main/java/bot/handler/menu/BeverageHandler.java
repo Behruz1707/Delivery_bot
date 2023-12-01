@@ -11,9 +11,15 @@ import java.io.File;
 public class BeverageHandler {
     @SneakyThrows
     public static void montella(final Message message, final TelegramLongPollingBot bot) {
+//        InlineKeyboardMarkup inlineKeyboardMarkup = InlineKeyboardMarkup.builder()
+//                .keyboardRow(List.of(
+//                        InlineKeyboardButton.builder().text("Bek").callbackData("data").build()
+//                ))
+//                .build();
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(message.getChatId());
         sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/beverages/montella.png")));
+//        sendPhoto.setReplyMarkup(inlineKeyboardMarkup);
         sendPhoto.setCaption("Montella \n" +
                 "\n" +
                 " \n" +
