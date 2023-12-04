@@ -29,9 +29,43 @@ public class ProductRepo {
                         .id(4)
                         .name("Double chicken-cheese")
                         .description("Soft bun,two juicy chucken cutlets (Halal), cheddar cheese, fresh tomatoes, pickles, iceberg lettuce, mayonnaise and ketchup\n\n")
-                        .price(30000F)
+                        .price(30000F).build(),
+                Product.builder()
+                        .id(5)
+                        .name("Caesar")
+                        .description("Сhicken fillet (Halal), Parmesan cheese, cherry tomaotes, croutons, iceberg lettuce, caesar sauce\n\n")
+                        .price(26000F).build(),
+                Product.builder()
+                        .id(6)
+                        .name("Greek")
+                        .description("Salad of juicy lettuce leaves, tomatoes, olives, fresh cucumbers and fetax cheese, seasoned with lemon and basil sauce\n\n")
+                        .price(25000F)
+                        .build(),
+                Product.builder()
+                        .id(7)
+                        .name("Sesame")
+                        .description("Iceberg lettuce, chicken fillet, served with seeds and Teriyaki sauce\n\n")
+                        .price(22000F)
+                        .build(),
+                Product.builder()
+                        .id(8)
+                        .name("Montella")
+                        .description("\n\n")
+                        .price(3000F)
+                        .build(),
+                Product.builder()
+                        .id(9)
+                        .name("Fanta")
+                        .description("\n\n")
+                        .price(8000F)
+                        .build(),
+                Product.builder()
+                        .id(10)
+                        .name("Sprite")
+                        .description("\n\n")
+                        .price(8000F)
                         .build()
-            ));
+        ));
 
     }
 

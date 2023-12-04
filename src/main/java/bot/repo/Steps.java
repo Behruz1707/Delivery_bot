@@ -7,6 +7,8 @@ public enum Steps {
     MENU,
     BURGERS,
     SALADS,
-    BEVERAGES
-
+    BEVERAGES,
+    APPROVING,
+    CONTACT,
+    LOCATION
 }

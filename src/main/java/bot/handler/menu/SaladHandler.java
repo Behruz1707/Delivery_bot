@@ -1,5 +1,7 @@
 package bot.handler.menu;
 
+import bot.handler.ButtonUtilsOfMenu;
+import bot.repo.ProductRepo;
 import lombok.SneakyThrows;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
@@ -13,39 +15,36 @@ public class SaladHandler {
     @SneakyThrows
     public static void caesar(final Message message, final TelegramLongPollingBot bot) {
         SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setReplyMarkup(ButtonUtilsOfMenu.buildProductMarkup(1, 5));
         sendPhoto.setChatId(message.getChatId());
         sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/salads/caesar.png")));
-        sendPhoto.setCaption("Цезарь \n" +
-                "\n" +
-                "Куриное филе (Halal), сыр пармезан, помидоры черри, сухари, салатные листья айсберг, соус цезарь \n" +
-                "\n" +
-                "Цена: 26 000  сум");
+        sendPhoto.setCaption(ProductRepo.PRODUCT_LIST.get(4).getName() +
+                "\n\n" + ProductRepo.PRODUCT_LIST.get(4).getDescription() +
+                "Price:  " + ProductRepo.PRODUCT_LIST.get(4).getPrice() + " sum");
         bot.execute(sendPhoto);
     }
 
     @SneakyThrows
     public static void greek(final Message message, final TelegramLongPollingBot bot) {
         SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setReplyMarkup(ButtonUtilsOfMenu.buildProductMarkup(1, 6));
         sendPhoto.setChatId(message.getChatId());
         sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/salads/greek.png")));
-        sendPhoto.setCaption("Греческий \n" +
-                "\n" +
-                "Салат из сочных салатных листьев, помидоров, маслин, свежих огурцов и сыра фетакса, приправленный лимонным соусом и соусом базилик \n" +
-                "\n" +
-                "Цена: 25 000  сум");
+        sendPhoto.setCaption(ProductRepo.PRODUCT_LIST.get(5).getName() +
+                "\n\n" + ProductRepo.PRODUCT_LIST.get(5).getDescription() +
+                "Price:  " + ProductRepo.PRODUCT_LIST.get(5).getPrice() + " sum");
         bot.execute(sendPhoto);
     }
 
     @SneakyThrows
     public static void sesame(final Message message, final TelegramLongPollingBot bot) {
         SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setReplyMarkup(ButtonUtilsOfMenu.buildProductMarkup(1, 7));
         sendPhoto.setChatId(message.getChatId());
         sendPhoto.setPhoto(new InputFile(new File("src/main/java/bot/photo_resources/salads/sesame.png")));
-        sendPhoto.setCaption("Сезам \n" +
-                "\n" +
-                "Сочные листья салата айсберг и кусочки нежнейшего куриного филе (Halal), посыпанные кунжутом, в аппетитном соусе терияки \n" +
-                "\n" +
-                "Цена: 22 000  сум");
+        sendPhoto.setCaption(ProductRepo.PRODUCT_LIST.get(6).getName() +
+                "\n\n" + ProductRepo.PRODUCT_LIST.get(6).getDescription() +
+                "Price:  " + ProductRepo.PRODUCT_LIST.get(6).getPrice() + " sum");
         bot.execute(sendPhoto);
     }
 
